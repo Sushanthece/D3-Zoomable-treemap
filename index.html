@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Zoomable Treemap </title>
+<style>
+#chart {
+        width: 1200px;
+        height: 420px;
+        margin: 1px auto;
+        position: relative;
+        -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+
+    text {
+        pointer-events: none;
+    }
+
+    .grandparent text { /* header text */
+        font-weight: bold;
+        font-size: medium;
+        font-family: "Open Sans", Helvetica, Arial, sans-serif; 
+    }
+
+    rect {
+        fill: none;
+        stroke: #fff;
+    }
+
+    rect.parent,
+    .grandparent rect {
+        stroke-width: 2px;
+    }
+
+    .grandparent rect {
+        fill: #fff;
+    }
+
+    .children rect.parent,
+    .grandparent rect {
+        cursor: pointer;
+    }
+
+    rect.parent {
+        pointer-events: all; 
+    }
+
+    .children:hover rect.child,
+    .grandparent:hover rect {
+        fill: #aaa;
+    }
+
+    .textdiv { /* text in the boxes */
+        font-size: x-small;
+        padding: 5px;
+        font-family: "Open Sans", Helvetica, Arial, sans-serif; 
+    }
+
+</style>
+
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css">
+<script type="text/javascript" src="d3.v3.min.js"></script>
+  <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+              <a id="forkme_banner" href="https://github.com/Sushanthece/D3-Zoomable-treemap">View on GitHub</a>
+              <h1 id="project_title">Zoomable Treemap</h1> 
+              <a id="home" href="http://sushanthece.github.io/">Home</a>
+           </header>
+        </div>
+    
+  <!-- MAIN CONTENT -->
+      <div>
+        <section id="main_content" class="inner" >   
+	      <div>
+            <p id="chart">
+            <script type="text/javascript" src="zoomable_treemap.js"></script>
+
+		  </div>
+		</section>
+      </div>
+    </body>
+</html>
